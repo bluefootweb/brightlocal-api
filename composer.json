@@ -1,5 +1,5 @@
 {
-    "name": "bluefoot/brightlocal-api",
+    "name": "bluefootweb/brightlocal-api",
     "description": "Get reviews, ratings, and other local business data from BrightLocal",
     "type": "craft-plugin",
     "version": "1.0.0",
@@ -36,8 +36,8 @@
         "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/bluefootweb/brightlocal-api/brightlocal-api/master/CHANGELOG.md",
         "components": {
-            "brightlocalApiService": "bluefoot\\brightlocalapi\\services\\BrightlocalApiService"
+            "brightlocalApiService": "bluefootweb\\brightlocalapi\\services\\BrightlocalApiService"
         },
-        "class": "bluefoot\\brightlocalapi\\BrightlocalApi"
+        "class": "bluefootweb\\brightlocalapi\\BrightlocalApi"
     }
 }

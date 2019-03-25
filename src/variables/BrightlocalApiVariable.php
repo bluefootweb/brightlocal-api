@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2019 Bluefoot
  */
 
-namespace bluefoot\brightlocalapi\variables;
+namespace bluefootweb\brightlocalapi\variables;
 
-use bluefoot\brightlocalapi\BrightlocalApi;
+use bluefootweb\brightlocalapi\BrightlocalApi;
 
 use Craft;
 

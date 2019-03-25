@@ -8,10 +8,10 @@
  * @copyright Copyright (c) 2019 Bluefoot
  */
 
-namespace bluefoot\brightlocalapi;
+namespace bluefootweb\brightlocalapi;
 
-use bluefoot\brightlocalapi\services\BrightlocalApiService as BrightlocalApiServiceService;
-use bluefoot\brightlocalapi\variables\BrightlocalApiVariable;
+use bluefootweb\brightlocalapi\services\BrightlocalApiService as BrightlocalApiServiceService;
+use bluefootweb\brightlocalapi\variables\BrightlocalApiVariable;
 
 use Craft;
 use craft\base\Plugin;
@@ -94,7 +94,7 @@ class BrightlocalApi extends Plugin
 
     protected function createSettingsModel()
     {
-        return new \bluefoot\brightlocalApi\models\Settings();
+        return new \bluefootweb\brightlocalApi\models\Settings();
     }
 
     protected function settingsHtml()

@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2019 Bluefoot
  */
 
-namespace bluefoot\brightlocalapi\models;
+namespace bluefootweb\brightlocalapi\models;
 
-use bluefoot\brightlocalapi\BrightlocalApi;
+use bluefootweb\brightlocalapi\BrightlocalApi;
 
 use Craft;
 use craft\base\Model;
