@@ -18,7 +18,7 @@ To install the plugin, follow these instructions.
 
 2. Then tell Composer to load the plugin:
 
-        composer require https://github.com/bluefootweb/brightlocal-api/bright-local-api
+        composer require bluefootweb/brightlocal-api/brightlocal-api
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for BrightLocal API.
 
