@@ -45,12 +45,10 @@ class BrightlocalApiVariable
      * @param null $optional
      * @return string
      */
-    public function exampleVariable($optional = null)
+    // Public Methods
+    // =========================================================================
+    public function brightLocal(int $businessId)
     {
-        $result = "And away we go to the Twig template...";
-        if ($optional) {
-            $result = "I'm feeling optional today...";
-        }
-        return $result;
+        return BrightlocalApi::getInstance()->brightlocalApi->getData($businessId);
     }
 }

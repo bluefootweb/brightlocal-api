@@ -32,21 +32,35 @@ class BrightlocalApiService extends Component
 {
     // Public Methods
     // =========================================================================
-
-    /**
-     * This function can literally be anything you want, and you can have as many service
-     * functions as you want
-     *
-     * From any other plugin file, call it like this:
-     *
-     *     BrightlocalApi::$plugin->brightlocalApiService->exampleService()
-     *
+    /*
      * @return mixed
      */
-    public function exampleService()
+    public function getData(int $businessId)
     {
-        $result = 'something';
+        $settings = Darksky::$plugin->getSettings();
+        $api_key = '';
+        $apiUrl = 'https://tools.brightlocal.com/seo-tools/api/v4/ld/fetch-reviews';
+        $client = new \GuzzleHttp\Client();
+        $data = array();
 
-        return $result;
+        try {
+            $api_key = (string)$settings->apiKey;
+            $apiUrl .= '?api-key=' . $api_key;
+            $apiUrl .= '&businessId=' . $businessId;
+            $response = $client->request('POST', $apiUrl);
+
+            // echo $response->getStatusCode(); # 200
+            // echo $response->getHeaderLine('content-type'); # 'application/json; charset=utf8'
+            // echo $response->getBody(); # '{"id": 1420053, "name": "guzzle", ...}'
+
+            $data = json_decode($response->getBody(), true);
+        } catch (\Exception $e) {
+            return [
+                'success' => false,
+                'reason' => ''
+            ];
+        }
+
+        return $data;
     }
 }
